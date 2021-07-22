@@ -8,7 +8,8 @@ Assignment: Create an ASP.NET Core MVC application to demonstrate that you under
     Make a view with an HTML form that will allow you to create your object (no model-binding)
     
     In the controller:
-    create an object and populate it with the form data (Hint: Your controller action method should take a IFormCollection object)
+    create an object and populate it with the form data
+    (Hint: Your controller action method should take a IFormCollection object)
 
     NO VALIDATION IS NECESSARY
 
