@@ -33,12 +33,14 @@ namespace HotelModelBindingMVC.Models
         /// Contact email address
         /// </summary>
         [Display(Name ="Email:")]
+        [DataType(DataType.EmailAddress)] // validation for email
         public string Email { get; set; }
 
         /// <summary>
         /// the day form was submitted
         /// </summary>
         [Display(Name ="Date:")]
+        [DataType(DataType.Date)] // without time
         public DateTime Date { get; set; }
     }
 }
