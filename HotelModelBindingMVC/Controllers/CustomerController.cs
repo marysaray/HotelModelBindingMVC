@@ -32,7 +32,8 @@ namespace HotelModelBindingMVC.Controllers
             // Add customer to database
 
             // display message if form has been submitted and hide form.
-            ViewData["Submit"] = true;
+            ViewData["Submit"] = $"Thank you, " + req.FirstName + " " +  req.LastName +
+                " for your RSVP! Please check your email for confirmation.";
 
             return View();
         }
