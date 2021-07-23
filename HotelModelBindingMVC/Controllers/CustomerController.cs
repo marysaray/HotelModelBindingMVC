@@ -30,6 +30,10 @@ namespace HotelModelBindingMVC.Controllers
             req.Date = Convert.ToDateTime(form["date"]); // convert to datetime
 
             // Add customer to database
+
+            // display message if form has been submitted and hide form.
+            ViewData["Submit"] = true;
+
             return View();
         }
     }
