@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Add Hotel";
+}
+
+<h1>Add Hotel</h1>
+
+@*create html form add data to class*@
+<form method="post">
+    @*inputs for all the properties*@
+    <label>Hotel Name:</label>
+    <input type="text" name="hotel-name" />
+    <br />
+
+    <label>Rooms:</label>
+    <input type="text" name="room" />
+    <br />
+
+    <label>Booked:</label>
+    <input type="text" name="booked" />
+    <br />
+
+    @*submit form*@
+    <input type="submit" value="Add Hotel"/>
+</form>
