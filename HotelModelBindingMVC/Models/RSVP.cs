@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HotelModelBindingMVC.Models
 {
     /// <summary>
-    /// Represents one customer reservation
+    /// Represents one customer information for reservation
     /// </summary>
     public class RSVP
     {

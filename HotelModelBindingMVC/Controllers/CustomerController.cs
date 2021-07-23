@@ -8,6 +8,9 @@ using HotelModelBindingMVC.Models;
 
 namespace HotelModelBindingMVC.Controllers
 {
+    /// <summary>
+    /// Customer Controller works with the RSVP object model form
+    /// </summary>
     public class CustomerController : Controller
     {
         [HttpGet] // associated with the nav-link URL
@@ -44,7 +47,7 @@ namespace HotelModelBindingMVC.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost] // retrieve data after submission: get data from the server
         public IActionResult AddWithBinding(RSVP reg) // model binding mapping with object
         {
             // valdidation code: data annotation in RSVP class.
@@ -52,6 +55,7 @@ namespace HotelModelBindingMVC.Controllers
             {
                 // display message
                 ViewData["Message"] = $"Thank you, {reg.FirstName} {reg.LastName} for you RSVP!";
+
                 // add to database here...
             }
             return View();
