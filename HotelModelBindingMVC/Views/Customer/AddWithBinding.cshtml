@@ -1,0 +1,51 @@
+﻿@model RSVP
+@{
+    ViewData["Title"] = "AddWithBinding";
+}
+
+<h1>Model Binding Version</h1>
+
+@if (ViewData["Message"] == null)
+{
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber"></span>
+        </div>
+
+        <div class="form-group">
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Date"></label>
+            <input asp-for="Date" class="form-control" />
+            <span asp-validation-for="Date"></span>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Submit" />
+
+    </form>
+}
+else
+{
+    <div class="alert alert-success">
+        @ViewData["Message"]
+    </div>
+}

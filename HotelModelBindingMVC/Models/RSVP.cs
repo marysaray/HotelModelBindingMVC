@@ -15,18 +15,21 @@ namespace HotelModelBindingMVC.Models
         /// The legal customer first name
         /// </summary>
         [Display(Name ="First Name:")]
+        [Required]
         public string FirstName { get; set; }
 
         /// <summary>
         /// The legal customer last name
         /// </summary>
         [Display(Name ="Last Name:")]
+        [Required]
         public string LastName { get; set; }
 
         /// <summary>
         /// Contact phone number
         /// </summary>
         [Display(Name ="Phone Number:")]
+        [Required]
         public string PhoneNumber { get; set; }
 
         /// <summary>
@@ -34,6 +37,8 @@ namespace HotelModelBindingMVC.Models
         /// </summary>
         [Display(Name ="Email:")]
         [DataType(DataType.EmailAddress)] // validation for email
+        [EmailAddress]
+        [Required]
         public string Email { get; set; }
 
         /// <summary>

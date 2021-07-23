@@ -37,5 +37,24 @@ namespace HotelModelBindingMVC.Controllers
 
             return View();
         }
+
+        [HttpGet] // navigates to form linked to URL
+        public IActionResult AddWithBinding()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddWithBinding(RSVP reg) // model binding mapping with object
+        {
+            // valdidation code: data annotation in RSVP class.
+            if (ModelState.IsValid) // true if all validation in model passes
+            {
+                // display message
+                ViewData["Message"] = $"Thank you, {reg.FirstName} {reg.LastName} for you RSVP!";
+                // add to database here...
+            }
+            return View();
+        }
     }
 }
